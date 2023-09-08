@@ -2,10 +2,10 @@
 Here is an app to generate ultrasound in order to repell insects such as Flies, and mosquitos. That's an experimental technology.  
 
 ## Demo
-[Here](https://lombard-web-services.github.io/Insect-Repeller/Insect-Repeller/index.html)
+[Here](https://lombard-web-services.github.io/Insect-Repeller/index.html)
 
 ## How to use
-![image](https://github.com/Lombard-Web-Services/Insect-Repeller/raw/master/Insect-Repeller/img/demo.gif)
+![image](https://github.com/Lombard-Web-Services/Insect-Repeller/raw/master/img/demo.gif)
 
 Press the button to bip at a certain frequency. 20500 Hz by default or configure by yourself, these frequencies can be generated from any laptops or smartphones.
 
