@@ -1,6 +1,8 @@
 {
- "name": "App",
- "icons": [
+  "short_name": "Insect-Repeller",
+  "name": "Insect Repeller",
+  "description": "The best experimental Insect Repeller progressive web application",
+  "icons": [
   {
    "src": "\/android-icon-36x36.png",
    "sizes": "36x36",
@@ -37,5 +39,13 @@
    "type": "image\/png",
    "density": "4.0"
   }
- ]
+ ],
+  "scope": "/",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "start_url": "https://lombard-web-services.github.io/Insect-Repeller/index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "lang": "",
+  "dir": ""
 }
