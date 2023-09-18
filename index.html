@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <!-- Copyright © By Thibaut LOMBARD, from Lombard Web: https://github.com/Lombard-Web-Services -->
+    <!-- Credits : -->
+    <!-- Oscilloscope : https://davidmatthew.ie/creating-an-oscilloscope-with-javascript/#ui -->
+    <!-- CSS3 button : https://codepen.io/rodhamjun/pen/PpYYYd -->
+    <!-- Fly SVG : Peter Selinger 2001-2017 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=487">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <title>Insect Repeller By Thibaut LOMBARD</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/manifest.json">
+    <!-- Twitter sites -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:description" content="Insect repeller App (Progressive Web App)"/>
+    <meta name="twitter:title" content="Insect repeller application"/>
+    <meta name="twitter:domain" content="lombard-web-services.github.io/Insect-Repeller/"/>
+    <meta name="twitter:image" content="https://lombard-web-services.github.io/Insect-Repeller/img/ogtw.jpg"/>
+    <!-- OG -->
+    <meta name="description" content="A progressive App , with ultrasounds to repell insects" />
+    <meta name="keywords" content="Insect repeller script with ultrasounds ">
+    <meta name="robots" content="index,follow">
+    <meta name="copyright" content="Colas World">
+    <meta property="og:title" content="Votre référence en supervision" />
+    <meta property="og:site_name" content="lombard-web-services.github.io/Insect-Repeller/"/>
+    <meta property="og:url" content="https://lombard-web-services.github.io/Insect-Repeller/" />
+    <meta property="og:description" content="Insect repeller app" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="article:author" content="Thibaut LOMBARD (github)" />
+    <meta property="og:image" content="https://lombard-web-services.github.io/Insect-Repeller/img/og.png" />
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#000000">
+    <style type="text/css">
+      #controls,body{display:flex;height:100%}.btn,a{text-decoration:none}#controls,.btn{color:#fff;margin:auto}.btn::before,body{width:100%;height:100%}.btn,.debug{text-align:center}*,.mouche{padding:0}*{margin:0;box-sizing:border-box}body{box-pack:center;justify-content:center;box-align:center;align-items:center;overflow:hidden;font-family:"Helvetica Neue",sans-serif}#canvas{position:absolute;top:0;left:0;background:radial-gradient(circle,#020024 0,#525151 0,#000 100%)}#controls,.btn,.mouche{position:relative}#controls{width:70%;flex-direction:column;top:0;left:0;z-index:2;background-color:#6666;padding:2em 2em 0;border-radius:2rem;font-size:1.2em}#led,#led.on{display:none}#controls button,#controls select{font-size:1.2em;padding:.5em 0}#controls #led,#controls input,#controls select{margin-bottom:1em}#controls button{border:0}.btn,.btn::before{border-radius:50%}#controls label{margin-bottom:.1em}.displayed{visibility:hidden;display:block}#led{height:.2em;background-color:#e23}#led.on{background-color:#49cb61}.btn{display:box;width:15rem;height:15rem;background:radial-gradient(circle,#020024 0,#8f8c8c 0,#000 100%);box-shadow:0 .2em .2em rgba(0,0,0,.3)}.btn::before{display:block;position:absolute;z-index:-1;background:#ff0;opacity:0;content:'';animation:1s infinite pulse}.btn:hover::before{animation:none;opacity:.4;transform:scale(1.3)}.btn.is-clicked{background:linear-gradient(to bottom,gray 0,#696969 100%)}.btn.is-clicked:before{animation:1s blastOut}@keyframes pulse{from{transform:scale(1);opacity:.4}to{transform:scale(1.3);opacity:0}}@keyframes blastOut{from{transform:scale(.9);opacity:.4}to{transform:scale(10);opacity:0}}.mouche{width:60%;background-image:url(img/mouche.svg);background-size:cover;height:80%;display:inline-block;margin:0 auto;top:1em}
+    </style>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/repeller.js"></script>
+  </head>
+  <body>
+    <div id="controls">
+      <h1 style="text-align:center;">Insect Repeller</h1>
+      <h4 style="text-align:center;">by <a href="https://github.com/Lombard-Web-Services" target="_blank" alt="Lombard Web">Lombard Web</a></h4>
+      <div class="btn" href="#" id="on-off" style="margin-top:5rem;">
+        <div class="mouche"></div>
+      </div>
+      <div class="displayed">
+        <div id="led" style="visibility:hidden;"></div>
+        <label for="osc-type" style="visibility:hidden;">Oscillator Type</label>
+        <select id="osc-type" style="visibility:hidden;">
+          <option value="sine">Sine</option>
+          <option value="square">Square</option>
+          <option value="sawtooth">Sawtooth</option>
+          <option value="triangle">Triangle</option>
+        </select>
+        <label for="frequency">Frequency: <span id="frequencyValue">20500</span>Hz</label>
+        <input id="frequency" type="range" min="15000" max="24000" step="1" value="20500">
+        <label for="gain" style="visibility:hidden;">Input Gain: <span id="gainValue">0.5</span></label>
+        <input id="gain" type="range" min="0" max="1" step="0.05" value="0.5" style="visibility:hidden;">
+      </div>
+      <span class="debug">Configure</span>
+    </div>
+    <canvas id="canvas"></canvas>
+    <script>
+    if ('serviceWorker' in navigator) {  
+      navigator.serviceWorker.register('/Insect-Repeller/js/sw.js')
+        .then(function (registration) {    
+        }).catch(function (err) {    
+        });
+    }
+   </script>
+  </body>
+</html>
