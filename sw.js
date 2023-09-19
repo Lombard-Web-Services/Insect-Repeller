@@ -1,6 +1,6 @@
 const version = '1.00',
     preCache = 'PRECACHE-1.00',
-    cacheList = ['/','index.html','js/'];
+    cacheList = ['/'];
 self.addEventListener('install', function(e) {
     self.skipWaiting(), caches.open(preCache).then(e => {
         e.addAll(cacheList)
