@@ -9,6 +9,10 @@ Here is an app to generate ultrasound in order to repell insects such as Flies, 
 
 Press the button to bip at a certain frequency. 20500 Hz by default or configure by yourself, these frequencies can be generated from any laptops or smartphones.
 
+## PWA
+This app is progressive and can be installed directly from the browser. 
+![image](https://github.com/Lombard-Web-Services/Insect-Repeller/raw/master/img/pwafeature.jpg)
+
 ## Note
 This app is distributed without any warrantly of usability. Some insects are curious while you stop the script they can come back to understand what happened at the place they have gone. Moreover you will have to wait some minutes depending on the propagating of sound waves for this script to work.
 
