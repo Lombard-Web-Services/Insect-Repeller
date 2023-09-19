@@ -43,7 +43,7 @@
   "scope": "/",
   "theme_color": "#000000",
   "background_color": "#000000",
-  "start_url": "https://lombard-web-services.github.io/Insect-Repeller/index.html",
+  "start_url": "https://lombard-web-services.github.io/Insect-Repeller/",
   "display": "standalone",
   "orientation": "portrait",
   "lang": "",
